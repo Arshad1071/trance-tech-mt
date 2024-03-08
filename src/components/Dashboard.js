@@ -74,7 +74,9 @@ const Dashboard = () => {
         </Item>
       </Grid>
       <Grid item xs={6} md={8} sx={{ marginLeft: 5 }}>
-        <h4 style={{ marginBottom: "50px" }}>Today's Highlights</h4>
+        {weatherData && (
+          <h4 style={{ marginBottom: "50px" }}>Today's Highlights</h4>
+        )}
         {weatherData && (
           <Box sx={{ flexGrow: 1 }}>
             <Grid
