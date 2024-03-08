@@ -73,7 +73,7 @@ const Dashboard = () => {
           )}
         </Item>
       </Grid>
-      <Grid item xs={6} md={8} sx={{  marginLeft: 5 }}>
+      <Grid item xs={6} md={8} sx={{ marginLeft: 5 }}>
         <h4 style={{ marginBottom: "50px" }}>Today's Highlights</h4>
         {weatherData && (
           <Box sx={{ flexGrow: 1 }}>
@@ -89,30 +89,33 @@ const Dashboard = () => {
               </Grid>
               <Grid xs={2} sm={4} md={4}>
                 <Item>
-                  <p>Wind Status: {weatherData.main.humidity}</p>
+                  <p>Wind Status: {weatherData.wind.speed} km/h</p>
                 </Item>
               </Grid>
               <Grid xs={2} sm={4} md={4}>
-                <Item>xs=2</Item>
+                <Item>
+                  <p>Sunrise: {weatherData.sys.sunrise} </p>
+                  <p>Sunset: {weatherData.sys.sunset} </p>
+                </Item>
               </Grid>
               <Grid xs={2} sm={4} md={4}>
-                <Item>xs=2</Item>
+                <Item>
+                  <p>Humidity: {weatherData.main.humidity}%</p>
+                </Item>
               </Grid>
               <Grid xs={2} sm={4} md={4}>
-                <Item>xs=2</Item>
+                <Item>
+                  <p>Visibility: {weatherData.visibility}</p>
+                </Item>
               </Grid>
               <Grid xs={2} sm={4} md={4}>
-                <Item>xs=2</Item>
+                <Item>
+                  <p>Air Quality: {weatherData.cod}</p>
+                </Item>
               </Grid>
-              <Grid xs={2} sm={4} md={4}>
+              {/* <Grid md={12}>
                 <Item>xs=2</Item>
-              </Grid>
-              <Grid xs={2} sm={4} md={4}>
-                <Item>xs=2</Item>
-              </Grid>
-              <Grid xs={2} sm={4} md={4}>
-                <Item>xs=2</Item>
-              </Grid>
+              </Grid> */}
             </Grid>
           </Box>
         )}
